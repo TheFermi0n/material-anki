@@ -42,12 +42,12 @@ Click on the images to enlarge. Both Light and Dark modes are available!!
 <details>
   <summary><h3>iOS</h3></summary>
   
-|![bif](images/iOS/bif.png)|![bib](images/iOS/bib.png)|
+|![blueif](images/iOS/blueif.png)|![blueib](images/iOS/blueib.png)|
 |:---:|:---:|
 |front blue| back blue|
-|![pif](images/iOS/pif.png)|![pib](images/iOS/pib.png)|
+|![purpleif](images/iOS/purpleif.png)|![purpleib](images/iOS/purpleib.png)|
 |front purple| back purple|
-|![gif](images/iOS/gif.png)|![gib](images/iOS/gib.png)|
+|![greenif](images/iOS/greenif.png)|![greenib](images/iOS/greenib.png)|
 |front green| back green|
 
 </details>
@@ -55,12 +55,12 @@ Click on the images to enlarge. Both Light and Dark modes are available!!
 <details>
   <summary><h3>iPadOS</h3></summary>
   
-|![bif](images/iOS/bif.png)|![bib](images/iOS/bib.png)|
+|![blueif](images/iOS/blueif.png)|![blueib](images/iOS/blueib.png)|
 |:---:|:---:|
 |front blue| back blue|
-|![pif](images/iOS/pif.png)|![pib](images/iOS/pib.png)|
+|![purpleif](images/iOS/purpleif.png)|![purpleib](images/iOS/purpleib.png)|
 |front purple| back purple|
-|![gif](images/iOS/gif.png)|![gib](images/iOS/gib.png)|
+|![greenif](images/iOS/greenif.png)|![greenib](images/iOS/greenib.png)|
 |front green| back green|
 
 </details>
