@@ -1,0 +1,99 @@
+/* -------------------------------------------------- CUSTOM FONTS */
+@font-face {
+  font-family: "IBM Plex Mono";
+  src:
+    local("IBMPlexMono-Regular"),
+    url("_IBMPlexMono-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src:
+    local("IBMPlexMono-Bold"),
+    url("_IBMPlexMono-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src:
+    local("IBMPlexMono-Italic"),
+    url("_IBMPlexMono-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src:
+    local("IBMPlexMono-BoldItalic"),
+    url("_IBMPlexMono-BoldItalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src:
+    local("IBMPlexSans-Regular"),
+    url("_IBMPlexSans-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src:
+    local("IBMPlexSans-Bold"),
+    url("_IBMPlexSans-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src:
+    local("IBMPlexSans-Italic"),
+    url("_IBMPlexSans-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src:
+    local("IBMPlexSans-BoldItalic"),
+    url("_IBMPlexSans-BoldItalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans JP";
+  src:
+    local("IBMPlexSansJP-Regular"),
+    url("_IBMPlexSansJP-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans JP";
+  src:
+    local("IBMPlexSansJP-Bold"),
+    url("_IBMPlexSansJP-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans JP";
+  src:
+    local("IBMPlexSansJP-SemiBold"),
+    url("_IBMPlexSansJP-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}

@@ -1,0 +1,103 @@
+<!-- 
+  BACK TEMPLATE 
+  Deck name: 
+  Note type: 
+  Card Type: 
+-->
+
+<div class="material-flashcard back">
+  <div class="material-deck">{{Deck}}</div>
+  <div class="material-field material-field--front" lang="ja">
+    {{furigana:Reading}} {{#sound}}{{sound}}{{/sound}}
+  </div>
+
+  <hr class="material-divider material-divider--answer" id="answer" />
+
+  <div class="material-field material-field--back" lang="multilingual">
+    <p class="main-answer"><b>{{english}}</b></p>
+    <p lang="ja">{{kana:Reading}}</p>
+    {{#kanji_meaning}}
+    <p>{{kanji_meaning}}</p>
+    {{/kanji_meaning}} {{#sentence_example}}
+    <hr class="material-divider material-divider-body" />
+    <dl>
+      <dt lang="ja">{{furigana:sentence_example}}</dt>
+      <dd>{{sentence-translation}}</dd>
+    </dl>
+    {{/sentence_example}} {{#pitch_accent}}
+    <hr class="material-divider material-divider-body" />
+    <p>{{pitch_accent}}</p>
+    {{/pitch_accent}} {{#Note}}
+    <hr class="material-divider material-divider-body" />
+    <p class="note"><u>Note:</u> <span class="note-content">{{Note}}</span></p>
+    {{/Note}}
+  </div>
+
+  <div class="material-tags">
+    {{#Tags}}
+    <div>{{Tags}}</div>
+    {{/Tags}}
+  </div>
+</div>
+
+<script>
+  // Split hierarchical tags
+  var tagsContainerEl = document.querySelector(".material-tags");
+  if (tagsContainerEl) {
+    tagsContainerEl.innerHTML = tagsContainerEl.innerHTML
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((tagEl) => {
+        var childTag = tagEl.split("::").filter(Boolean);
+        return (
+          "<span class='material-tag'>" +
+          childTag[childTag.length - 1] +
+          "</span>"
+        );
+      })
+      .join("");
+  }
+
+  // Breadcrumbs to current deck
+  var deckEl = document.querySelector(".material-deck");
+  if (deckEl) {
+    var subDecks = deckEl.textContent.split("::").filter(Boolean);
+    deckEl.innerHTML = (
+      subDecks.length > 2
+        ? ["...", subDecks[subDecks.length - 2], subDecks[subDecks.length - 1]]
+        : subDecks
+    )
+      .map((subDeck) => "<span class='material-subdeck'>" + subDeck + "</span>")
+      .join("&nbsp;/&nbsp;");
+  }
+
+  // Check if the HTML element has a class 'mobile'
+  if (!document.querySelector("html").classList.contains("mobile")) {
+    function addRubyPopup() {
+      var rbElements = document.querySelectorAll("ruby rb");
+
+      rbElements.forEach(function (rb) {
+        var parentRuby = rb.parentElement;
+        var timeoutId;
+
+        parentRuby.addEventListener("mouseenter", function (event) {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(function () {
+            parentRuby.classList.add("ruby-popup");
+            rb.style.top = event.clientY + "px";
+            rb.style.left = event.clientX + "px";
+          }, 200);
+        });
+        parentRuby.addEventListener("mouseleave", function () {
+          clearTimeout(timeoutId);
+          parentRuby.classList.remove("ruby-popup");
+          rb.removeAttribute("style");
+          parentRuby.removeAttribute("class");
+        });
+      });
+    }
+
+    // Call the function directly
+    addRubyPopup();
+  }
+</script>

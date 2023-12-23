@@ -1,0 +1,49 @@
+<!-- 
+  FRONT TEMPLATE 
+  Deck name:  
+  Note type: 
+  Card Type: 
+-->
+
+<div class="material-flashcard">
+  <div class="material-deck">{{Deck}}</div>
+  <div class="material-field material-field--front" lang="ja">
+    {{furigana:Reading}}
+  </div>
+
+  {{#Tags}}
+  <div class="material-tags">{{Tags}}</div>
+  {{/Tags}}
+</div>
+
+<script>
+  // Split hierarchical tags
+  var tagsContainerEl = document.querySelector(".material-tags");
+  if (tagsContainerEl) {
+    tagsContainerEl.innerHTML = tagsContainerEl.innerHTML
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((tagEl) => {
+        var childTag = tagEl.split("::").filter(Boolean);
+        return (
+          "<span class='material-tag'>" +
+          childTag[childTag.length - 1] +
+          "</span>"
+        );
+      })
+      .join("");
+  }
+
+  // Breadcrumbs to current deck
+  var deckEl = document.querySelector(".material-deck");
+  if (deckEl) {
+    var subDecks = deckEl.textContent.split("::").filter(Boolean);
+    deckEl.innerHTML = (
+      subDecks.length > 2
+        ? ["...", subDecks[subDecks.length - 2], subDecks[subDecks.length - 1]]
+        : subDecks
+    )
+      .map((subDeck) => "<span class='material-subdeck'>" + subDeck + "</span>")
+      .join("&nbsp;/&nbsp;");
+  }
+</script>

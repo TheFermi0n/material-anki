@@ -1,0 +1,56 @@
+/* -------------------------------------------------- COLORS */
+.card {
+  /* Light theme */
+  background-color: var(--md-sys-color-surface-light);
+  --text-fg: var(--md-sys-color-on-background-light);
+  --text-fg-faint: var(--md-sys-color-on-surface-variant-light);
+  --text-bg-selected: var(--md-sys-color-surface-variant-light);
+  --card-bg: var(--md-sys-color-primary-rgb-light);
+  --card-bg-back: var(--md-sys-color-surface-light);
+  --card-border: transparent;
+  --divider: var(--md-sys-color-outline-variant-light);
+  --tag-fg: var(--md-sys-color-on-background-light);
+  --tag-bg: transparent;
+  --tag-fg-active: var(--md-sys-color-on-secondary-container-light);
+  --tag-bg-active: transparent;
+  --tag-border: var(--md-sys-color-outline-variant-light);
+  --tag-border-active: var(--md-sys-color-inverse-primary-light);
+  --cloze-fg: var(--md-sys-color-tertiary-light);
+  --cloze-bg: transparent;
+  --link-fg: var(--md-sys-color-primary-light);
+  --link-bg: transparent;
+  --link-fg-active: var(--md-sys-color-inverse-primary-light);
+  --link-bg-active: var(--md-sys-color-primary-container-light);
+  --bold-fg: var(--md-sys-color-error-light);
+  --italic-fg: var(--md-sys-color-tertiary-container-light);
+  --bold-italic-fg: var(--md-sys-color-outline-light);
+  --underline-fg: var(--md-sys-color-tertiary-light);
+}
+
+.card.night_mode {
+  /* Dark theme */
+  background-color: var(--md-sys-color-surface-dark);
+  --text-fg: var(--md-sys-color-on-background-dark);
+  --text-fg-faint: var(--md-sys-color-on-surface-variant-dark);
+  --text-bg-selected: var(--md-sys-color-surface-variant-dark);
+  --card-bg: var(--md-sys-color-primary-rgb-dark);
+  --card-bg-back: var(--md-sys-color-surface-dark);
+  --card-border: transparent;
+  --divider: var(--md-sys-color-outline-variant-dark);
+  --tag-fg: var(--md-sys-color-on-background-dark);
+  --tag-bg: transparent;
+  --tag-fg-active: var(--md-sys-color-on-secondary-container-dark);
+  --tag-bg-active: transparent;
+  --tag-border: var(--md-sys-color-outline-variant-dark);
+  --tag-border-active: var(--md-sys-color-inverse-primary-dark);
+  --cloze-fg: var(--md-sys-color-tertiary-dark);
+  --cloze-bg: transparent;
+  --link-fg: var(--md-sys-color-primary-dark);
+  --link-bg: transparent;
+  --link-fg-active: var(--md-sys-color-inverse-primary-dark);
+  --link-bg-active: var(--md-sys-color-primary-container-dark);
+  --bold-fg: var(--md-sys-color-error-dark);
+  --italic-fg: var(--md-sys-color-tertiary-container-dark);
+  --bold-italic-fg: var(--md-sys-color-outline-dark);
+  --underline-fg: var(--md-sys-color-tertiary-dark);
+}

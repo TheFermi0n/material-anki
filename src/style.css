@@ -1,0 +1,476 @@
+/* 
+  Material Anki deck styling
+  Version: 1.0.0
+*/
+
+/* The sequence of this imports matter */
+@import url("material-fonts.css");
+@import url("material-base.css");
+
+/* ------------------------------------------------------------- 
+Uncomment and comment lines below to change the color name
+Available colors are: purple|green|blue
+*/
+@import url("_md3-purple.css");
+/* ------------------------------------------------------------- */
+
+@import url("material-colors.css");
+
+/* -------------------------------------------------- PREFERENCES */
+
+.back .material-deck,
+.back .material-tag {
+  opacity: 0.7;
+}
+
+[lang="ja"] {
+  font-family: var(--font-family-JA);
+}
+
+/* -------------------------------------------------- BACKGROUND */
+.card {
+  cursor: default;
+  padding: 0.5em 0;
+}
+html:not(.mobile) .card {
+  padding: 0.5em;
+}
+html {
+  font-family: var(--font-family);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+body {
+  width: 90%;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
+}
+
+/* -------------------------------------------------- FLASHCARD */
+.material-flashcard {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--card-border);
+  color: var(--text-fg);
+  font-family: var(--font-family);
+  font-size: var(--font-size-main);
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: var(--card-max-width);
+  text-align: var(--card-text-align);
+  word-wrap: break-word;
+}
+.mobile .material-flashcard {
+  font-size: var(--font-size-main-mobile);
+}
+.material-flashcard ::selection {
+  background-color: var(--text-bg-selected);
+}
+
+/* -------------------------------------------------- FIELDS */
+.material-field {
+  margin: 15px 0;
+}
+.material-field:hover {
+  cursor: text;
+}
+.material-field--back {
+  color: var(--text-fg-faint);
+  font-size: var(--font-size-back);
+  border-radius: var(--border-radius);
+  background-color: var(--card-bg);
+  padding: 5px 5px;
+}
+.mobile .material-field--back {
+  font-size: var(--font-size-back-mobile);
+}
+.material-field--front {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  border: 10px solid var(--card-border);
+  height: inherit;
+}
+.back .material-field--front {
+  background-color: inherit;
+}
+.back {
+  background-color: var(--card-bg-back);
+}
+
+.main-answer {
+  font-size: var(--font-size-answer);
+  color: var(--bold-fg);
+}
+
+.mobile .main-answer {
+  font-size: var(--font-size-answer-mobile);
+}
+
+.note {
+  font-size: var(--font-size-note);
+  display: flex;
+  align-items: baseline;
+  padding: 5px 10px;
+}
+.mobile .note {
+  font-size: var(--font-size-note-mobile);
+}
+.note u {
+  margin-right: 6px;
+}
+
+.note .note-content {
+  text-align: left;
+  margin-left: auto;
+}
+
+/* -------------------------------------------------- CLOZE */
+.cloze {
+  background-color: var(--cloze-bg);
+  color: var(--cloze-fg);
+}
+
+/* -------------------------------------------------- DECK */
+.material-deck {
+  margin: 1em;
+  display: flex;
+  color: var(--text-fg-faint);
+  font-size: var(--font-size-tag-deck);
+  white-space: nowrap;
+  font-family: var(--font-family-mono);
+  font-style: italic;
+  opacity: 0.2;
+}
+.mobile .material-deck {
+  font-size: var(--font-size-tag-deck-mobile);
+  margin: 1rem;
+}
+.material-deck:hover {
+  opacity: 1;
+  cursor: text;
+}
+
+.material-subdeck {
+  text-decoration: underline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.material-subdeck:first-child {
+  text-decoration: none;
+}
+
+/* -------------------------------------------------- TAGS */
+.material-tags {
+  margin: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: var(--font-family-mono);
+  font-style: italic;
+  font-size: var(--font-size-tag-deck);
+  text-transform: capitalize;
+}
+
+.mobile .material-tags {
+  margin: 1rem;
+  font-size: var(--font-size-tag-deck-mobile);
+}
+
+.material-tag {
+  background-color: var(--tag-bg);
+  border-radius: var(--border-radius);
+  color: var(--tag-fg-faint);
+  display: inline;
+  margin: 0 0.5em 0 0;
+  padding: 0 5px;
+  transition: all 0.25s;
+  word-break: break-word;
+  opacity: 0.2;
+}
+
+.material-tag:hover {
+  background-color: var(--tag-bg);
+  color: var(--tag-fg-active);
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 1;
+}
+
+/* -------------------------------------------------- DIVIDER */
+.material-divider {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2.5px dashed var(--divider);
+  margin: 1rem;
+  padding: 0;
+}
+
+.material-divider-body {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dashed var(--divider);
+  margin: 1rem;
+  padding: 0;
+}
+
+.material-divider--answer {
+  margin: 0;
+}
+
+/* -------------------------------------------------- IMAGES */
+img {
+  border-radius: var(--border-radius);
+  display: block;
+  margin: auto;
+  width: var(--img-width);
+  max-width: var(--img-width) !important;
+  transition: max-width 0.25s 0.1s, opacity 0.25s 0.1s, filter 0.1s,
+    transform 0s;
+  cursor: zoom-in;
+}
+
+.night_mode img {
+  filter: var(--img-filter);
+  opacity: var(--img-brightness);
+}
+
+img + br {
+  display: none;
+}
+
+html:not(.mobile) img:active {
+  border: 1px solid var(--card-bg);
+  margin: 0 auto;
+  cursor: zoom-out;
+  filter: none;
+  left: 0;
+  max-width: 95% !important;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+  z-index: 100;
+}
+
+/* -------------------------------------------------- TABLES */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 10px auto;
+  max-width: 100%;
+  width: 80%;
+}
+
+table thead {
+  background-color: var(--text-bg-selected);
+}
+
+table tr:nth-of-type(even) {
+  background-color: var(--text-bg-selected);
+}
+
+thead tr th:first-child,
+tbody tr td:first-child {
+  width: 8em;
+  min-width: 8em;
+  max-width: 8em;
+  word-break: break-all;
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 0.25em;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 0.25em;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 0.25em;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 0.25em;
+}
+
+table th {
+  border-bottom: solid 1px var(--card-border);
+  border-left: solid 1px var(--card-border);
+  border-top: solid 1px var(--card-border);
+  padding: 0.5em;
+}
+
+table th:last-child {
+  border-right: solid 1px var(--card-border);
+}
+
+table td {
+  border-bottom: solid 1px var(--card-border);
+  border-left: solid 1px var(--card-border);
+  padding: 0.5em;
+}
+
+table td:last-of-type {
+  border-right: solid 1px var(--card-border);
+}
+
+/* -------------------------------------------------- LIST AND DEFINITIONS */
+dd {
+  margin-left: 0;
+}
+
+dt {
+  font-size: var(--font-size-answer);
+}
+
+ul {
+  display: inline-block;
+  text-align: left;
+}
+
+ul {
+  margin: 0;
+  list-style: "- ";
+  padding-inline-start: 0px;
+  word-wrap: nowrap;
+}
+
+ruby:before {
+  content: "";
+  display: block;
+}
+
+rb,
+rt {
+  display: block;
+  text-align: center;
+}
+
+ruby rt {
+  text-align: center;
+  line-height: 1;
+  font-size: 60%;
+  padding: 2px;
+  position: relative;
+}
+
+.ruby-spoiler ruby rt {
+  background-color: var(--text-fg);
+  transition: background-color 0.3s ease-in-out;
+  border-radius: var(--border-radius);
+}
+.ruby-spoiler ruby rt:hover {
+  background-color: inherit;
+  cursor: help;
+}
+
+.ruby-popup rt {
+  display: inline !important;
+  font-size: inherit !important;
+  position: relative !important;
+  background-color: var(--card-bg);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  z-index: 100;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.ruby-popup rb {
+  display: none;
+}
+.ruby-popup rt:hover {
+  cursor: zoom-in;
+  transform: scale(1.1);
+}
+
+/* -------------------------------------------------- HYPERLINKS */
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--link-fg);
+  padding: 0 0.1em;
+  transition: all 0.1s;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: var(--link-fg-active);
+}
+
+/* -------------------------------------------------- FORMATTING */
+b,
+strong {
+  color: var(--bold-fg);
+}
+
+i,
+em {
+  color: var(--italic-fg);
+}
+
+b > i,
+i > b {
+  color: var(--bold-italic-fg);
+}
+
+u {
+  color: var(--underline-fg);
+}
+
+pre {
+  white-space: normal;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* -------------------------------------------------- PITCH ACCENT CSS */
+.nightMode svg.pitch text {
+  fill: var(--text-fg) !important;
+}
+
+svg.pitch text {
+  font-family: var(--font-family-JA) !important;
+}
+
+svg.pitch > path {
+  stroke: var(--text-fg) !important;
+}
+
+.nightMode svg.pitch > path {
+  stroke: var(--text-fg) !important;
+}
+
+.nightMode svg.pitch > circle[r="5"] {
+  fill: var(--bold-fg) !important;
+}
+
+svg.pitch > circle[r="5"] {
+  fill: var(--bold-fg) !important;
+}
+
+.nightMode svg.pitch > circle[r="3.25"] {
+  fill: var(--card-bg) !important;
+}
+
+/* -------------------------------------------------- END OF THEME */
