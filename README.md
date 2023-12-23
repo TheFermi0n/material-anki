@@ -75,7 +75,7 @@ I will soon release a tempalte deck so that you can just import it and start usi
 
 ### Manual installation
 
-1. Download the latest release.
+1. Download the [latest release](https://github.com/TheFermi0n/material-anki/releases/latest).
 2. Extract the zip.
 3. Copy everything inside the `resources` folder and paste it into Anki's `collection.media` folder.[^1]
 4. Copy the Styling data from the `style.css`` into the "Styling" of a new deck or an already available deck.
